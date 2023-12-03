@@ -62,7 +62,7 @@ client.on('guildMemberAdd', member =>{
 client.on('guildMemberRemove', member => {
     const logChannel = client.channels.cache.get("1140281282216083576")
     const logEmbed = new MessageEmbed()
-    .setTitle(`Membro saiu`)
+    .setTitle(`Membro Saiu`)
     .addField("User", member.user.tag)
     .setTimestamp()
     .setColor('#000000')
