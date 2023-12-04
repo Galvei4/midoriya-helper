@@ -22,6 +22,7 @@ client.on('ready', () => {
     console.log(`${client.user.username} ready and up to go ✅`)
 
     const express = require("express")
+    const path = require('path')
 
     const app = express()
 
@@ -29,7 +30,7 @@ client.on('ready', () => {
 
     app.get("/", (req, res) => {
         res.status(200).sendFile(
-            path.join(__dirname, "..", "pages", "landingPage.html")
+            path.join(__dirname, "pages", "landingPage.html")
         )
     })
 
