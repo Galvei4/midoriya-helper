@@ -20,6 +20,20 @@ client.categories = fs.readdirSync("./commands/");
 client.on('ready', () => {
     client.user.setActivity(`Entre na Mansão do Midoriya! https://discord.gg/S2YxuNdKfp`)
     console.log(`${client.user.username} ready and up to go ✅`)
+
+    const express = require("express")
+
+    const app = express()
+
+    const port = process.env.PORT || 3001
+
+    app.get("/", (req, res) => {
+        res.status(200).sendFile(
+            path.join(__dirname, "..", "pages", "landingPage.html")
+        )
+    })
+
+    app.listen(port)
 })
 
 // Message Event and Command Handler
