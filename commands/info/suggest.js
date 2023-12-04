@@ -24,7 +24,7 @@ module.exports = {
         .setTimestamp()
         .setColor("#2a603b")
 
-        const ideiaChannel = client.channels.cache.get("1140281281742118951")
+        const ideiaChannel = client.channels.cache.get("1140281281742118950")
         ideiaChannel.send(embed)
         message.channel.send(`${message.author} ideia enviada com sucesso! ✅`)
     }
